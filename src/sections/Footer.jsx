@@ -7,16 +7,16 @@ const Footer = () => {
     <footer className="max-container">
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         <div className="flex flex-col items-start">
-          <a href="/">
+          <a href="/" className="hover:border-b-white hover:border-b-[1px] pb-2">
             <img src={footerLogo} width={150} height={46} />
           </a>
-          <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
+          <p className="mt-4 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
             Get shoes ready for the new term at your nearest Nike store. Find
             Your perfect size in store. Get rewards!
           </p>
           <div className="flex items-center gap-5 mt-8">
             {socialMedia.map((icon) => (
-              <div className="flex justify-center items-center w-12 h-12 bg-white rounded-full">
+              <div className="flex justify-center items-center w-12 h-12 bg-white rounded-full hover:bg-slate-gray cursor-pointer">
                 <img 
                   src={icon.src}
                   alt={icon.alt}
@@ -43,8 +43,8 @@ const Footer = () => {
         </div>      
       </div>
       <div className="flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
-        <p className="cursor-pointer">@Jasnosz, 2023</p>
-        <p className="font-montserrat cursor-pointer">Terms & Conditions</p>
+        <p className="cursor-pointer hover:text-slate-gray">@Jasnosz, 2023</p>
+        <p className="font-montserrat cursor-pointer hover:text-slate-gray">Terms & Conditions</p>
       </div>
     </footer>
   );
