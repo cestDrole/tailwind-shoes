@@ -5,26 +5,30 @@ const Button = ({
   textColor,
   borderColor,
   fullWidth,
+  link,
 }) => {
   return (
-    <button
+    <a
+      href={link}
       className={`flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none 
-      ${
-        backgroundColor
-          ? `${backgroundColor} ${textColor} ${borderColor}`
-          : "bg-coral-red text-white border-coral-red"
-      } rounded-full ${fullWidth && 'wfull'}`}
+    ${
+      backgroundColor
+        ? `${backgroundColor} ${textColor} ${borderColor}`
+        : "bg-coral-red text-white border-coral-red"
+    } rounded-full ${fullWidth && "wfull"}`}
     >
-      {label}
+      <button className='flex justify-center items-center gap-2'>
+        {label}
 
-      {iconUrl && (
-        <img
-          src={iconUrl}
-          alt="arrow right icon"
-          className="ml-2 rounded-full w-5 h-5"
-        />
-      )}
-    </button>
+        {iconUrl && (
+          <img
+            src={iconUrl}
+            alt='arrow right icon'
+            className='ml-2 rounded-full w-5 h-5'
+          />
+        )}
+      </button>
+    </a>
   );
 };
 
