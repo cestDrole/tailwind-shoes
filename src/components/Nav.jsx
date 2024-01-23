@@ -2,9 +2,9 @@ import { headerLogo } from "../assets/images";
 import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
 
-const Nav = () => {
+const Nav = ({ status, setToggle }) => {
   return (
-    <header className='padding-x py-8 absolute z-10 w-full'>
+    <header className='padding-x py-8 absolute z-20 w-screen'>
       <nav className='flex justify-between items-center max-container'>
         <a href='/'>
           <img src={headerLogo} alt='Logo' width={130} height={29} />
@@ -22,7 +22,14 @@ const Nav = () => {
           ))}
         </ul>
         <div className='hidden max-lg:block'>
-          <img src={hamburger} alt='Hamburger' width={25} height={25} />
+          <img
+            src={hamburger}
+            alt='Hamburger'
+            width={25}
+            height={25}
+            onClick={() => setToggle(!status)}
+            className='cursor-pointer z-50'
+          />
         </div>
       </nav>
     </header>
